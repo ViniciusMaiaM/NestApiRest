@@ -16,11 +16,12 @@
 
 - [📑 About the project](#-about)
 - [📖 Documentation](#-documentation)
-- [📥 Package mangeger](#-packages)
+- [📥 Package manager](#-packages)
 - [🚀 Starting](#-starting)
 
 ## 📑 About
 The code was developed using TypeScript and the Node framework [Nest](https://github.com/nestjs/nest). For accessing and manipulating the database, Prisma was used. For authentication/login, JSON Web Tokens (JWT) and Passport were used. Finally, for the documentation, Prisma ERD was used.
+
 ## 📖 Documentation
 
 - [[Project] - Class diagram](./DOCS/diagram.png)
