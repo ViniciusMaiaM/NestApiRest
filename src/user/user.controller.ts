@@ -1,16 +1,22 @@
-import { Controller, Get, UseGuards, Req, Patch } from '@nestjs/common';
-import { AuthGuard } from '@nestjs/passport';
+import { Controller, Get, UseGuards, Body, Patch } from '@nestjs/common';
 import { User } from '@prisma/client';
-import { Request } from 'express';
-import { GetUser } from 'src/auth/decorator';
-import { JwtGuard } from 'src/auth/guard';
+import { GetUser } from '../auth/decorator';
+import { JwtGuard } from '../auth/guard';
+import { EditUserDto } from './dto';
+import { UserService } from './user.service';
 
 // With the guard in here, everything that is under it will require the authentication token
 @UseGuards(JwtGuard)
 @Controller('users')
 export class UserController {
+  constructor(private userService: UserService) {}
   @Get('me')
   getMe(@GetUser() user: User) {
     return user;
+  }
+
+  @Patch()
+  edituser(@GetUser('id') userId: string, @Body() dto: EditUserDto) {
+    return this.userService.editUser(userId, dto);
   }
 }
