@@ -24,7 +24,7 @@ The code was developed using TypeScript and the Node framework [Nest](https://gi
 
 ## 📖 Documentation
 
-- [[Project] - Class diagram](./DOCS/diagram.png)
+- [[Project] - Class diagram](./DOCS/src_diagram.png)
 
 - [[Project] - Entity relationship diagram](./DOCS/ERD.png)
 
